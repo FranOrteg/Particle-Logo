@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let particleArray = [];
-let AdjustX = 130;
+let AdjustX = 600;
 let AdjustY = 100;
 
 // handle mouse
@@ -20,11 +20,11 @@ window.addEventListener('mousemove', function (event) {
 
 // Create an image data
 const image = new Image();
-image.src = 'logo.png';
+image.src = 'linkedin.png';
 
 image.addEventListener('load', function () {
-    canvas.width = 1000;
-    canvas.height = 1000;
+    canvas.width = 1500;
+    canvas.height = 1500;
     ctx.drawImage(image, 0, 0);
     const imageData = ctx.getImageData(0, 0, image.width, image.height);
 
@@ -41,7 +41,7 @@ image.addEventListener('load', function () {
         }
 
         draw() {
-            ctx.fillStyle = 'red';
+            ctx.fillStyle = 'blue';
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
@@ -84,7 +84,7 @@ image.addEventListener('load', function () {
 
     function init() {
         particleArray = [];
-        const maxParticles = 3000; // Maximum number of particles
+        const maxParticles = 6000; // Maximum number of particles
         const density = Math.ceil(imageData.data.length / (maxParticles * 4));
 
         for (let i = 0; i < imageData.data.length; i += density) {

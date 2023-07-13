@@ -3,8 +3,8 @@ const ctx2 = canvas2.getContext('2d');
 canvas2.width = window.innerWidth;
 canvas2.height = window.innerHeight;
 let particleArray2 = [];
-let AdjustX2 = 600;
-let AdjustY2 = 280;
+let AdjustX2 = 300;
+let AdjustY2 = 300;
 
 // handle mouse
 let mouse2 = {
@@ -20,7 +20,7 @@ window.addEventListener('mousemove', function (event) {
 
 ctx2.font = '100px verdana';
 ctx2.fillStyle = 'black';
-ctx2.fillText('VisioTech', 0, 100);
+ctx2.fillText('Linked', 0, 100);
 /* ctx2.strokeStyle = 'black';
 ctx2.strokeRect(0, 0, 100, 100); */
 const TextCoordinates = ctx2.getImageData(0, 0, 600, 600);
